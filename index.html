@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1 class="logo"> Online Shop Admin │ </h1>
+
+        
+          <nav>
+            <ul>
+              <li><a href="index.html">Products</a></li>
+              <li><a href="Customers.html">Customers</a></li>
+              <li><a href="Orders.html">Orders</a></li>
+              <li><a href="Reports.html">Reports</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+
+      <h1 class="current-page-info"> Product </h1>
+
+
+
+      <section>
+        <div class="table-container">
+            <table class="_table">
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Product Number</th>
+                  <th>Color</th>
+                  <th>List Price</th>
+                  <th>Modified Time</th>
+                  <th width="80px">
+                    <div class="action_container">
+                      <button class="success" onclick="create_tr('table_body')">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </div>
+                  </th>
+                  <td width="70px">
+                    <div class="action_container">
+                      <button class="danger" onclick="remove_tr(this)">
+                        <i class="fa fa-close"></i>
+                      </button>
+                    </div>
+                  </td>
+
+                </tr>
+              </thead>
+              <tbody id="table_body">
+                <tr width="40px">
+                  <td wi>
+                    <input  type="text" class="form_control" placeholder="Bukhuti Vardanidze">
+                  </td>
+                  <td>
+                    <input type="number" class="form_control" placeholder="+995-xxxxxxxxx">
+                  </td>
+                  <td>
+                    <input type="text" class="form_control" placeholder="ex: Red">
+                  </td>
+
+                  <td>
+                    <input type="number" class="form_control" placeholder="Ex: 500$">
+                  </td>
+                  <td>
+                    <input type="date" class="form_control" placeholder="Modified Time">
+                  </td>
+
+
+
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </section>
+
+
+      <script src="js/app.js"></script>
+</body>
+</html>
