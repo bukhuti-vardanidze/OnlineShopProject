@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image" href="images/lg.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -52,17 +53,35 @@
 
     <h1 class="current-page-info">Products Page</h1>
 
+    <div class="Search"></div>
+
     <section class="tb">
       <div class="main-container">
         <div class="table-wrapper">
           <div class="table-title">
             <div class="row">
               <div class="col-sm-8">
-                <h2>Product <b>Details</b></h2>
+                <button
+                  class="show-filter"
+                  id="showFilter"
+                  onclick="showHide()"
+                >
+                  Show Filter
+                </button>
+                <div class="div1" id="showDiv">
+                  <input
+                    class="textfinder"
+                    type="text"
+                    id="myInput"
+                    onkeyup="FunctionNames()"
+                    placeholder="Enter Product Name ..."
+                    title="Type in a name"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <table class="table table-bordered">
+          <table class="table table-bordered" id="myTable">
             <thead>
               <tr>
                 <th>Product Name</th>
@@ -76,11 +95,11 @@
             </thead>
             <tbody>
               <tr>
-                <td>Bukhuti Vardanidze</td>
+                <td>HL Road Road Frame</td>
                 <td>BV-212-VB</td>
-                <td>RED</td>
+                <td>Red</td>
                 <td>2100$</td>
-                <td>date</td>
+                <td>01/12/2022</td>
                 <td>
                   <a class="add" title="Add" data-toggle="tooltip"
                     ><i class="material-icons">&#xE03B;</i></a
@@ -93,12 +112,13 @@
                   >
                 </td>
               </tr>
+
               <tr>
-                <td>Bukhuti Vardanidze</td>
-                <td>BV-212-VB</td>
-                <td>RED</td>
-                <td>2100$</td>
-                <td>date</td>
+                <td>HL Road Road Frame</td>
+                <td>BV-213-VB</td>
+                <td>Black</td>
+                <td>2500$</td>
+                <td>01/12/2022</td>
                 <td>
                   <a class="add" title="Add" data-toggle="tooltip"
                     ><i class="material-icons">&#xE03B;</i></a
@@ -111,12 +131,13 @@
                   >
                 </td>
               </tr>
+
               <tr>
-                <td>Bukhuti Vardanidze</td>
-                <td>BV-212-VB</td>
-                <td>RED</td>
-                <td>2100$</td>
-                <td>date</td>
+                <td>LL Road Road Frame</td>
+                <td>BV-214-VB</td>
+                <td>Red</td>
+                <td>21900$</td>
+                <td>01/12/2022</td>
                 <td>
                   <a class="add" title="Add" data-toggle="tooltip"
                     ><i class="material-icons">&#xE03B;</i></a
@@ -127,6 +148,119 @@
                   <a class="delete" title="Delete" data-toggle="tooltip"
                     ><i class="material-icons">&#xE872;</i></a
                   >
+                </td>
+              </tr>
+
+              <tr>
+                <td>GK Road Road Frame</td>
+                <td>BV-215-VB</td>
+                <td>Black</td>
+                <td>2800$</td>
+                <td>01/12/2022</td>
+                <td>
+                  <a class="add" title="Add" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE03B;</i></a
+                  >
+                  <a class="edit" title="Edit" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE254;</i></a
+                  >
+                  <a class="delete" title="Delete" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE872;</i></a
+                  >
+                </td>
+              </tr>
+
+              <tr>
+                <td>BV Road Road Frame</td>
+                <td>BV-216-VB</td>
+                <td>Red</td>
+                <td>21520$</td>
+                <td>01/12/2022</td>
+                <td>
+                  <a class="add" title="Add" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE03B;</i></a
+                  >
+                  <a class="edit" title="Edit" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE254;</i></a
+                  >
+                  <a class="delete" title="Delete" data-toggle="tooltip"
+                    ><i class="material-icons"> &#xE872;</i></a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>HH Road Road Frame</td>
+                <td>BV-217-VB</td>
+                <td>Red</td>
+                <td>21520$</td>
+                <td>01/12/2022</td>
+                <td>
+                  <a class="add" title="Add" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE03B;</i></a
+                  >
+                  <a class="edit" title="Edit" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE254;</i></a
+                  >
+                  <a class="delete" title="Delete" data-toggle="tooltip"
+                    ><i class="material-icons"> &#xE872;</i></a
+                  >
+                </td>
+              </tr>
+
+              <tr>
+                <td>KH Road Road Frame</td>
+                <td>BV-218-VB</td>
+                <td>Red</td>
+                <td>21520$</td>
+                <td>01/12/2022</td>
+                <td>
+                  <a class="add" title="Add" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE03B;</i></a
+                  >
+                  <a class="edit" title="Edit" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE254;</i></a
+                  >
+                  <a class="delete" title="Delete" data-toggle="tooltip"
+                    ><i class="material-icons"> &#xE872;</i></a
+                  >
+                </td>
+              </tr>
+
+              <tr>
+                <td>CH Road Road Frame</td>
+                <td>BV-219-VB</td>
+                <td>Red</td>
+                <td>21520$</td>
+                <td>01/12/2022</td>
+                <td>
+                  <a class="add" title="Add" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE03B;</i></a
+                  >
+                  <a class="edit" title="Edit" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE254;</i></a
+                  >
+                  <a class="delete" title="Delete" data-toggle="tooltip"
+                    ><i class="material-icons"> &#xE872;</i></a
+                  >
+                </td>
+              </tr>
+
+              <tr>
+                <td>HL Road Road Frame</td>
+                <td>BV-220-VB</td>
+                <td>Black</td>
+                <td>8500$</td>
+                <td>01/12/2022</td>
+                <td>
+                  <a class="add" title="Add" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE03B;</i>
+                  </a>
+                  <a class="edit" title="Edit" data-toggle="tooltip">
+                    <i class="material-icons">&#xE254;</i>
+                  </a>
+                  <a class="delete" title="Delete" data-toggle="tooltip"
+                    ><i class="material-icons">&#xE872;</i>
+                  </a>
                 </td>
               </tr>
             </tbody>
